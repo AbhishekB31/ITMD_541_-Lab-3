@@ -1,0 +1,120 @@
+/* Global styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'TT Interphases', sans-serif;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* background image and content */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('Images/LikedOurFood.png') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading {
+    font-family: 'Satisfy', sans-serif;
+    font-size: 100px;
+    color: rgba(9,125,76,255);
+    position: absolute;
+    top: 30px;
+    opacity: 0;
+    transform: translateY(-100px);
+    animation: riseEffect 1s ease-out forwards;
+}
+
+.tip-button {
+    display: inline-block;
+    position: absolute;
+    bottom: 40%;
+    color: #fdf6e3;
+    background: #097d4c;
+    border: 1px solid transparent;
+    padding: 12px 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    line-height: 1.4;
+    font-weight: 300;
+    border-radius: 40px;
+    text-transform: uppercase;
+    cursor: pointer;
+    opacity: 0;
+    animation: fadeInButton 1s ease-out 1s forwards;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.tip-button:hover {
+    background: white;
+    border: 2px solid #8a5933;
+    transform: translate(2px);
+    color: #097d4c;
+}
+
+@keyframes riseEffect {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInButton {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Media query for smaller screens (tablets) */
+@media (max-width: 768px) {
+    .heading {
+        font-size: 60px; 
+        top: 20px;
+    }
+    
+    .tip-button {
+        font-size: 24px; 
+        padding: 10px 25px;
+        bottom: 30%; 
+    }
+}
+
+/* Media query for mobile devices (phones) */
+@media (max-width: 480px) {
+    .heading {
+        font-size: 40px; 
+        top: 10px;
+    }
+
+    .tip-button {
+        font-size: 20px; 
+        padding: 8px 20px;
+        bottom: 25%; 
+    }
+}
+
+/* Media query for very small screens */
+@media (max-width: 360px) {
+    .heading {
+        font-size: 35px; 
+        top: 5px;
+    }
+
+    .tip-button {
+        font-size: 18px; 
+        padding: 6px 15px;
+        bottom: 20%;
+    }
+}
+    

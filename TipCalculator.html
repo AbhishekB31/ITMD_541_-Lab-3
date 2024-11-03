@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TipCalculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Made by Brahmbhatt Abhishek Kamleshbhai</h2>
+        <section>
+            <div class="wrapper">
+                <label for="bill" class="lbl">Bill</label>
+                <div class="input-box">
+                    <span>$</span>
+                    <input type="number" value="0.00" id="bill" class="val">
+                </div>
+            </div>
+            <div class="wrapper">
+                <label for="currency" class="lbl">Select Currency</label>
+                <select id="currency" class="val">
+                    <option value="INR">Indian Rupee (₹)</option>
+                    <option value="USD" selected>United States Dollar ($)</option>
+                    <option value="JPY">Japanese Yen (¥)</option>
+                </select>
+            </div>
+            <div class="wrapper">
+                <span class="lbl">Tip</span>
+                <span id="tip-amount" class="val">$0</span>
+            </div>
+            <section>
+                <div class="wrapper">
+                    <label for="tip" class="lbl">Tip %</label>
+                    <span id="tip-percent" class="val">0%</span>
+                </div>
+                <input type="range" min="1" max="100" id="tip" value="0">
+            </section>
+            <hr>
+            <div class="wrapper">
+                <span class="lbl">Total Amount</span>
+                <span id="total-amount" class="val">$0</span>
+            </div>
+        </section>
+       
+        <section>
+            <div class="wrapper">
+                <label class="lbl">Satisfaction Level</label>
+                <div class="emoji-container">
+                    <span class="emoji" data-value="1">😔</span>
+                    <span class="emoji" data-value="2">😐</span>
+                    <span class="emoji" data-value="3">🙂</span>
+                    <span class="emoji" data-value="4">😊</span>
+                    <span class="emoji" data-value="5">😁</span>
+                </div>
+            </div>
+        </section>
+        <div id="invalid-input-modal" class="invalid-input-modal">
+            <div class="modal-content">
+              <h2>Error!</h2>
+              <p>You cannot input a non-number or a negative number.</p>
+              <button id="close-warning-btn">Close</button>
+            </div>
+          </div>
+        <section>
+            <div class="thank-you-modal" id="thankYouModal">
+                <div class="modal-content">
+                    <h2>Thank You, Come Again!</h2>
+                    <p>We appreciate your visit and look forward to serving you again soon!</p>
+                    <button id="close-btn">Close</button>
+                </div>
+            </div>
+        </section>
+        
+        <button id="submit-btn">SUBMIT</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
